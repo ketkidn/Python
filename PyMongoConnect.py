@@ -1,8 +1,8 @@
-import pymongo
+from pymongo import MongoClient
+def get_database():
+   CONNECTION_STRING = "mongodb+srv://ketkidn:Mongodb@15@testk.mongodb.net/MyFirstMongo"
+   client = MongoClient(CONNECTION_STRING)
+   return client['user_shopping_list']
 
-myclient = pymongo.MongoClient("mongodb://localhost:27017")
-mydb=myclient["MyFirstMongo"]
-mycol=mydb["Employee"]
-mydict={"name": "John", "address":"USA"}
-x= mycol.insert_one(mydict)
-print(x)
+if __name__ == "__main__":   
+     dbname = get_database()
