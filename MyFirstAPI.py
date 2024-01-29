@@ -4,7 +4,7 @@ app = Flask (__name__)
 
 @app.route("/")
 def home():
-    return "Hometest"
+    return "Hometest_success"
 
 @app.route("/get-user/<user_id>")
 def get_user(user_id):
